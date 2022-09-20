@@ -1,0 +1,13 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    @include maxpoint(tablet){
+        justify-content: center;
+    }
+    
+}

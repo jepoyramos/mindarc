@@ -1,0 +1,41 @@
+  @mixin tablet {
+    @include maxpoint($tablet) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @include maxpoint($desktop) {
+      @content;
+    }
+  }
+  
+  @mixin desktop-md {
+    @include maxpoint($desktop-md) {
+      @content;
+    }
+  }
+  
+  @mixin desktop-lg {
+    @include maxpoint($desktop-lg) {
+      @content;
+    }
+  }
+  
+  @mixin maxpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (max-width: #{map-get($breakpoints, $breakpoint) - 1}) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    }
+  }
+  
+  @mixin bp($break, $viewport1) {
+    @media screen and (min-width: $break) and (max-width: $viewport1) { 
+          @content; 
+    }
+  }

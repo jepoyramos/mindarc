@@ -1,0 +1,9 @@
+.o-container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+    @include maxpoint($desktop){
+        padding: 0 64px;
+    }
+}

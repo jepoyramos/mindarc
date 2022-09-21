@@ -1,21 +1,9 @@
-@tailwind base;
-@tailwind utilities;
+@import "~bootstrap/scss/bootstrap";
 
-@import "settings/_variables";
 @import "settings/_font";
 @import "settings/_common";
 
-@import "tools/_mixins";
+@import "components/_hero";
+@import "components/_3col-cards";
 
-@import "vendor/_vendor";
 
-@import "objects/_container";
-@import "objects/_columns";
-@import "objects/_inputs";
-
-@import "components/_header";
-@import "components/_nav";
-@import "components/_footer";
-@import "components/_cards";
-
-@import "tools/_utils";
